@@ -8,7 +8,7 @@ DOCKER_COMPOSE := docker-compose
 SERVICE_NAME := web
 
 # Build target
-build:
+build:   
 ifeq ($(OS),Linux)
 	@echo "Building for Linux"
 	$(DOCKER_COMPOSE) build
