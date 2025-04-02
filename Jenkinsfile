@@ -12,7 +12,7 @@ pipeline {
                 sh "docker build . -t flaskapp"
             }
         }
-        stage("Push to DockerHub"){
+          stage("Push to DockerHub"){
             steps{
                 withCredentials([usernamePassword(credentialsId:"dockerHub",passwordVariable:"dockerHubPass",usernameVariable:"dockerHubUser")]){
                     sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
