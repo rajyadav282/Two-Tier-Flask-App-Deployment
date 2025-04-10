@@ -10,10 +10,10 @@ RUN apt-get update \
     && apt-get install -y gcc default-libmysqlclient-dev pkg-config \
     && rm -rf /var/lib/apt/lists/*
       
-# Copy the requirements file into the container
+# copyreuirementsintonumberndereetin
 COPY requirements.txt .
 
-# Install app dependencies      
+# Install app dependencies   lltedepenmdenciesnnsubin   
 RUN pip install mysqlclient
 RUN pip install --no-cache-dir -r requirements.txt
 
